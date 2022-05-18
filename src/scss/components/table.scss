@@ -1,0 +1,98 @@
+.table {
+    &.cb-table {
+
+        thead {
+            background: $black-opacity-04;
+
+            @include for-tablet-down {
+                display: none;
+            }
+
+            tr {
+                th {
+                    font-size: $font-size-sm;
+                    color: $gray-dark;
+                    font-weight: $font-weight-medium;
+                    padding: $space12;
+                    border-top: none;
+                    border-bottom: solid $border-width $border-color;
+                    vertical-align: middle;
+
+                    .material-icons {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            border-top: none;
+
+            tr {
+                @include for-tablet-down {
+                    border-bottom: solid $border-width $border-color;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                td {
+                    padding: $space12;
+                    border-bottom: solid $border-width $border-color;
+                    vertical-align: middle;
+
+                    @include for-tablet-down {
+                        display: block;
+                        width: 100%;
+                        line-height: normal;
+                        border: 0;
+                        padding: 0 $space12 $space12;
+
+                        &[data-title]:before {
+                            font-size: $font-size-sm;
+                            font-weight: $font-weight-regular;
+                            color: $black-opacity-54;
+                            content: attr(data-title);
+                            display: block;
+                            margin-bottom: $space4;
+                        }
+
+                        &:first-child {
+                            padding-top: $space12;
+                        }
+
+                        &.table-col-xs-50 {
+                            width: 50%;
+                        }
+
+                        &.table-col-xs-25 {
+                            width: 25%;
+                        }
+
+                        &.table-col-title,
+                        &.table-col-actions {
+                            &[data-title]:before {
+                                content: none;
+                            }
+                        }
+
+                        &.table-col-actions {
+                            display: flex;
+                            justify-content: end;
+                        }
+                    }
+
+                }
+
+                &:last-child {
+                    @include for-tablet-down {
+                        border-bottom: none;
+                    }
+
+                    td {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+}

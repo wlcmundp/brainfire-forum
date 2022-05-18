@@ -1,0 +1,656 @@
+.form-group {
+  &.cb-form-group {
+    position: relative;
+
+    .form-label {
+      font-size: $font-size-sm;
+      color: $heading-color;
+      display: block;
+    }
+
+    .form-control {
+      height: 50px;
+      border: $border-width-2 solid $border-color;
+      padding: $space12 $space16;
+      @include transition($transition);
+      border-radius: 8px;
+      color: $body-color;
+
+      &:focus {
+        outline: 0;
+        border-color: $secondary;
+        box-shadow: $card-shadow;
+        @include transition($transition);
+      }
+
+      &:disabled,
+      &:read-only {
+        background-color: $gray-lighter;
+      }
+    }
+
+    .form-textarea {
+      resize: none;
+      height: 90px;
+    }
+
+    .form-select {
+      height: 50px;
+      border: $border-width-2 solid $border-color;
+      padding: $space12 40px $space12 $space16;
+      @include transition($transition);
+      border-radius: 8px;
+      color: $body-color;
+
+      &:focus {
+        outline: 0;
+        border-color: $secondary;
+        box-shadow: $card-shadow;
+        @include transition($transition);
+      }
+    }
+
+    &.has-validation {
+
+      // form Invalid
+      .form-control:invalid {
+        border-color: $danger-color;
+      }
+
+      .invalid-feedback {
+        color: $danger-color;
+        font-size: $font-size-sm;
+        margin: $space6 0 0;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: 18px;
+        padding-left: 24px;
+        background-image: url("../../assets/images/error-ico.svg");
+      }
+
+      // form success
+      .form-control:valid {
+        border-color: $success-color;
+      }
+
+      .valid-feedback {
+        color: $success-color;
+        font-size: $font-size-sm;
+        margin: $space6 0 0;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: 18px;
+        padding-left: 24px;
+        background-image: url("../../assets/images/success-ico.svg");
+      }
+    }
+
+    .form-input-append {
+      position: relative;
+
+      .form-control {
+        padding-right: 50px;
+      }
+
+      .input-append-icon {
+        position: absolute;
+        right: 8px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: none;
+        padding: 0;
+        border: none;
+        display: flex;
+        align-items: center;
+        color: $gray-dark;
+      }
+    }
+
+    .form-input-prepend {
+      position: relative;
+
+      .form-control {
+        padding-left: 50px;
+      }
+
+      .input-prepend-icon {
+        position: absolute;
+        left: 16px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: none;
+        padding: 0;
+        border: none;
+        display: flex;
+        align-items: center;
+        color: $gray-dark;
+
+        &.input-prepend-filled {
+          background: $border-color;
+          left: 2px;
+          top: 2px;
+          border-radius: 6px;
+          bottom: 2px;
+          padding: 0px $space8;
+        }
+      }
+    }
+  }
+}
+
+//Simple Radio
+.simple-radio-selection {
+  display: inline-flex;
+
+  .form-check-input {
+    display: none;
+  }
+
+  .form-check-label {
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+    @include transition($transition);
+
+    .radio-icon {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      overflow: hidden;
+
+      &:before,
+      &:after {
+        font-family: "Material Icons";
+        font-size: 22px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        color: $gray-dark;
+        @include transition($transition);
+      }
+
+      &:before {
+        content: "radio_button_unchecked";
+      }
+
+      &:after {
+        content: "radio_button_checked";
+        opacity: 0;
+        color: $secondary;
+      }
+    }
+  }
+
+  .form-check-input:checked+.form-check-label {
+    @include transition($transition);
+    color: $heading-color;
+
+    .radio-icon {
+      &:before {
+        opacity: 0;
+        @include transition($transition);
+      }
+
+      &:after {
+        opacity: 1;
+        @include transition($transition);
+      }
+    }
+  }
+}
+
+
+// Custom Radio
+.custom-radio-selection {
+  .form-check-input {
+    display: none;
+  }
+
+  .form-check-label {
+    padding: $space12 $space16 $space12 $space40;
+    border: solid $border-width-2 $border-color;
+    border-radius: 8px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    @include transition($transition);
+
+    &:before {
+      content: "radio_button_unchecked";
+      font-family: "Material Icons";
+      font-size: 22px;
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $gray-dark;
+      @include transition($transition);
+    }
+
+    &:after {
+      content: "radio_button_checked";
+      font-family: "Material Icons";
+      color: $secondary;
+      font-size: 22px;
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      @include transition($transition);
+    }
+  }
+
+  .form-check-input:checked+.form-check-label {
+    border-color: $secondary;
+    @include transition($transition);
+    color: $heading-color;
+
+    &:before {
+      opacity: 0;
+      @include transition($transition);
+    }
+
+    &:after {
+      opacity: 1;
+      @include transition($transition);
+    }
+  }
+}
+
+
+//Simple Checkbox
+.simple-checkbox-selection {
+  display: inline-flex;
+
+  .form-check-input {
+    display: none;
+  }
+
+  .form-check-label {
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+    @include transition($transition);
+
+    .checkbox-icon {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      overflow: hidden;
+
+      &:before,
+      &:after {
+        font-family: "Material Icons";
+        font-size: 22px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        color: $gray-dark;
+        @include transition($transition);
+      }
+
+      &:before {
+        content: "check_box_outline_blank";
+      }
+
+      &:after {
+        content: "check_box";
+        opacity: 0;
+        color: $secondary;
+      }
+    }
+  }
+
+  .form-check-input:checked+.form-check-label {
+    @include transition($transition);
+    color: $heading-color;
+
+    .checkbox-icon {
+      &:before {
+        opacity: 0;
+        @include transition($transition);
+      }
+
+      &:after {
+        opacity: 1;
+        @include transition($transition);
+      }
+    }
+  }
+}
+
+//Custom Checkbox
+.custom-checkbox-selection {
+  .form-check-input {
+    display: none;
+  }
+
+  .form-check-label {
+    padding: $space12 $space16 $space12 $space40;
+    border: solid $border-width-2 $border-color;
+    border-radius: 8px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    @include transition($transition);
+
+    &:before {
+      content: "check_box_outline_blank";
+      font-family: "Material Icons";
+      font-size: 22px;
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $gray-dark;
+      @include transition($transition);
+    }
+
+    &:after {
+      content: "check_box";
+      font-family: "Material Icons";
+      color: $secondary;
+      font-size: 22px;
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      @include transition($transition);
+    }
+  }
+
+  .form-check-input:checked+.form-check-label {
+    border-color: $secondary;
+    @include transition($transition);
+    color: $heading-color;
+
+    &:before {
+      opacity: 0;
+      @include transition($transition);
+    }
+
+    &:after {
+      opacity: 1;
+      @include transition($transition);
+    }
+  }
+}
+
+//Custom file upload
+.custom-file-upload {
+  position: relative;
+  margin-bottom: $space8;
+
+  .form-control {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+
+  .custom-file-label {
+    height: 50px;
+    border: $border-width-2 solid $border-color;
+    padding: $space12 120px $space12 $space16;
+    @include transition($transition);
+    border-radius: 8px;
+    color: $body-color;
+    display: block;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:active {
+      outline: 0;
+      border-color: $secondary;
+      box-shadow: $card-shadow;
+      @include transition($transition);
+    }
+
+    &.placeholder-text {
+      color: rgba($body-color, 0.7);
+    }
+
+    .custom-input-btn {
+      cursor: pointer;
+      background: $secondary-lighter;
+      padding: $space6 $space12;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: 0 6px 6px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $secondary;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-bold;
+      border: $border-width-2 solid $border-color;
+      @include transition($transition);
+    }
+  }
+
+  .form-control:focus+.custom-file-label {
+    outline: 0;
+    border-color: $secondary;
+    box-shadow: $card-shadow;
+    @include transition($transition);
+
+    .custom-input-btn {
+      border-color: $secondary;
+      @include transition($transition);
+    }
+  }
+
+  .form-control:disabled+.custom-file-label {
+    background-color: $gray-lighter;
+    cursor: auto;
+
+    &:hover,
+    &:active {
+      border-color: $border-color;
+      box-shadow: none;
+    }
+
+    .custom-input-btn {
+      border-color: $border-color;
+      cursor: auto;
+    }
+  }
+}
+
+// Custom date picker
+.react-datetime-picker {
+  &.custom-date-picker {
+    width: 100%;
+
+    .react-datetime-picker__wrapper {
+      height: 50px;
+      border: $border-width-2 solid $border-color;
+      padding: $space12 $space16;
+      @include transition($transition);
+      border-radius: 8px;
+      color: $body-color;
+
+      span {
+        color: $body-color;
+      }
+
+      input {
+        color: $body-color;
+        border-radius: 3px;
+
+        &:focus {
+          outline: 1px solid $secondary;
+        }
+      }
+
+      .react-datetime-picker__inputGroup__amPm {
+        color: $body-color;
+        border-radius: 3px;
+        padding: $space2;
+
+        &:focus {
+          outline: 1px solid $secondary;
+        }
+      }
+
+      .react-datetime-picker__clear-button {
+        padding: 0 $space4;
+        margin-right: $space8;
+
+        svg {
+          stroke: $danger-color;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          stroke: darken($danger-color, 5%);
+        }
+      }
+
+      .react-datetime-picker__calendar-button {
+        padding: 0;
+
+        svg {
+          stroke: $secondary;
+        }
+      }
+    }
+
+    .react-calendar {
+      border-color: $border-color;
+      box-shadow: $card-hover-shadow;
+      border-radius: 8px;
+
+      .react-calendar__month-view__days__day--weekend {
+        color: $danger-color;
+      }
+
+      .react-calendar__tile--active {
+        color: $secondary;
+        background-color: rgba($secondary, 0.12);
+      }
+
+      .react-calendar__tile--hasActive {
+        color: $secondary;
+        background-color: rgba($secondary, 0.12);
+      }
+    }
+
+    .react-datetime-picker__clock {
+      height: auto !important;
+      border-color: $border-color;
+      box-shadow: $card-hover-shadow;
+      border-radius: 8px;
+    }
+  }
+}
+
+// custom multi select
+.custom-mutli-select {
+  .css-1s2u09g-control {
+    border: $border-width-2 solid $border-color;
+    border-radius: 8px;
+    color: $body-color;
+    min-height: 50px;
+    box-shadow: none;
+
+    &:hover {
+      border: $border-width-2 solid $secondary;
+      box-shadow: $card-shadow;
+    }
+  }
+
+  .css-1pahdxg-control {
+    border: $border-width-2 solid $secondary;
+    border-radius: 8px;
+    color: $body-color;
+    min-height: 50px;
+    box-shadow: $card-shadow;
+
+    &:hover {
+      border: $border-width-2 solid $secondary;
+      box-shadow: $card-shadow;
+    }
+  }
+
+  .css-1okebmr-indicatorSeparator {
+    background-color: $border-color;
+  }
+
+  .css-1rhbuit-multiValue {
+    border-radius: 4px;
+    background-color: $border-color;
+  }
+
+  .css-xb97g8 {
+    border-radius: 4px;
+
+    &:hover {
+      color: $danger-color;
+      background-color: lighten($danger-color, 35%);
+    }
+  }
+
+  .css-26l3qy-menu {
+    border-color: $border-color;
+    box-shadow: $card-hover-shadow;
+    border-radius: 8px;
+    margin-top: 2px;
+
+    .css-4ljt47-MenuList {
+      .css-1n7v3ny-option {
+        background-color: $gray-lighter;
+        color: $heading-color;
+      }
+
+      .css-9gakcf-option {
+        color: $white;
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+// Custom calendar
+.custom-calendar {
+  width: 100%;
+  border: solid $border-width $border-color;
+  border-radius: 8px;
+  font-family: $body-font;
+  @include for-tablet-portrait-down {
+    font-size: $font-size-sm;
+  }
+
+  .react-calendar__tile--now {
+    border-radius: 4px;
+    background-color: rgba($secondary, 0.12);
+  }
+
+  .react-calendar__tile:enabled:hover,
+  .react-calendar__tile:enabled:focus {
+    background-color: $gray-light;
+    border-radius: 4px;
+  }
+
+  .react-calendar__tile--active,
+  .react-calendar__tile--active:enabled:hover,
+  .react-calendar__tile--active:enabled:focus,
+  .react-calendar__tile--hasActive,
+  .react-calendar__tile--hasActive:enabled:hover,
+  .react-calendar__tile--hasActive:enabled:focus {
+    background-color: $primary;
+    color: $white;
+    border-radius: 4px;
+  }
+}

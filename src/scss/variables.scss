@@ -1,0 +1,109 @@
+//******** Google Fonts ********//
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+
+//******** Colors ********//
+$white: #fff;
+$white-opacity-87: rgba($white, 0.87);
+$white-opacity-54: rgba($white, 0.54);
+$white-opacity-24: rgba($white, 0.24);
+$white-opacity-12: rgba($white, 0.12);
+
+$black: #000;
+$black-opacity-87: rgba($black, 0.87);
+$black-opacity-54: rgba($black, 0.54);
+$black-opacity-24: rgba($black, 0.24);
+$black-opacity-16: rgba($black, 0.16);
+$black-opacity-12: rgba($black, 0.12);
+$black-opacity-08: rgba($black, 0.08);
+$black-opacity-04: rgba($black, 0.04);
+
+$primary: #17325c;
+$primary-hover: darken($primary, 5%);
+$primary-darker: darken($primary, 43%);
+$primary-lighter: lighten($primary, 49%);
+$secondary-lighter: #fbf2e6;
+$secondary: #d38003;
+$secondary-hover: darken($secondary, 5%);
+
+$heading-color: #141414;
+$body-color: #363b39;
+$body-bgcolor: $white;
+$gray-dark: #727272;
+$gray: #bdbdbd;
+$gray-light: #d7d7d7;
+$gray-lighter: #f3f5f7;
+$border-color: #e7e7e7;
+$success-color: #198754;
+$danger-color: #dc3545;
+$danger-bg-light: #FCEBEC;
+$danger-border-light: #F8D7DA;
+
+//******** Fonts Family ********//
+$heading-font: "Manrope", sans-serif;
+$body-font: "Manrope", sans-serif;
+
+//******** Font Size ********//
+$h1-font-size: 2.5rem;
+$h1-font-mobile-size: 2rem;
+$h2-font-size: 2rem;
+$h2-font-mobile-size: 1.75rem;
+$h3-font-size: 1.75rem;
+$h3-font-mobile-size: 1.5rem;
+$h4-font-size: 1.5rem;
+$h4-font-mobile-size: 1.25rem;
+$h5-font-size: 1.25rem;
+$h5-font-mobile-size: 1.125rem;
+$h6-font-size: 1.125rem;
+$display-5-font-size: 3rem;
+$display-5-font-mobile-size: 2.125rem;
+$font-size-18: 1.125rem;
+$font-size-normal: 1rem;
+$font-size-sm: 0.875rem;
+$font-size-13: 0.813rem;
+$font-size-12: 0.75rem;
+$font-size-11: 0.688rem;
+
+//******** Font Weight ********//
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+//******** Transition ********//
+$transition: 0.3s ease-in;
+
+//******** Spaces ********//
+$space2: 0.125rem;
+$space4: 0.25rem;
+$space6: 0.375rem;
+$space8: 0.5rem;
+$space10: 0.625rem;
+$space12: 0.75rem;
+$space16: 1rem;
+$space24: 1.5rem;
+$space30: 1.875rem;
+$space40: 2.5rem;
+$space60: 3.75rem;
+
+//******** Card ********//
+$card-shadow: 0 6px 16px $black-opacity-08;
+$card-hover-shadow: 0 10px 20px $black-opacity-12;
+$testimonial-card-shadow: 0 3px 6px $black-opacity-04;
+$testimonial-card-hover-shadow: 0 8px 12px $black-opacity-12;
+$chat-message-shadow: 0 2px 4px $black-opacity-04;
+$card-border-radius: 0.5rem;
+
+//******** Border ********//
+$border-width: 1px;
+$border-width-2: 2px;
+$border-radius: 0.25rem;
+$divider-light: $black-opacity-04;
+
+//******** Button ********//
+$btn-shadow: 0px 3px 6px $black-opacity-12;
+$btn-hover-shadow: 0 8px 24px $black-opacity-12;
+$btn-icon-font-size: 1.125rem;
+
+//******** Header ********//
+$header-shadow: 0 10px 30px $black-opacity-08;

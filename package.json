@@ -1,0 +1,91 @@
+{
+  "name": "brainfire-blog",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4",
+    "@editorjs/checklist": "^1.3.0",
+    "@editorjs/code": "^2.7.0",
+    "@editorjs/delimiter": "^1.2.0",
+    "@editorjs/editorjs": "^2.22.2",
+    "@editorjs/embed": "^2.5.0",
+    "@editorjs/header": "^2.6.2",
+    "@editorjs/image": "^2.6.2",
+    "@editorjs/inline-code": "^1.3.1",
+    "@editorjs/link": "^2.4.0",
+    "@editorjs/list": "^1.6.2",
+    "@editorjs/marker": "^1.2.2",
+    "@editorjs/paragraph": "^2.8.0",
+    "@editorjs/quote": "^2.4.0",
+    "@editorjs/raw": "^2.3.0",
+    "@editorjs/simple-image": "^1.4.1",
+    "@editorjs/table": "^2.0.1",
+    "@editorjs/warning": "^1.2.0",
+    "@faker-js/faker": "^6.0.0-alpha.5",
+    "@progress/kendo-drawing": "^1.16.3",
+    "@progress/kendo-react-pdf": "^5.2.0",
+    "axios": "^0.24.0",
+    "bootstrap": "5.1.3",
+    "chart.js": "^3.7.0",
+    "chartjs-adapter-moment": "^1.0.0",
+    "chartjs-plugin-labels": "^1.1.0",
+    "cors": "^2.8.5",
+    "date-and-time": "^2.1.0",
+    "emoji-mart": "^3.0.1",
+    "express": "^4.17.1",
+    "javascript-time-ago": "^2.3.13",
+    "moment": "^2.29.1",
+    "react-alert": "^7.0.3",
+    "react-alert-template-basic": "^1.0.2",
+    "react-bootstrap": "^2.0.2",
+    "react-calendar": "^3.5.0",
+    "react-chartjs-2": "^4.0.0",
+    "react-confirm-alert": "^2.7.0",
+    "react-datetime-picker": "^3.4.3",
+    "react-editor-js": "^2.0.6",
+    "react-loader-spinner": "^5.1.0",
+    "react-material-ui-icon-picker": "^0.0.1",
+    "react-pdf": "^5.7.2",
+    "react-redux": "^7.2.6",
+    "react-select": "^5.2.1",
+    "react-share": "^4.4.0",
+    "redux": "^4.1.2",
+    "sass": "^1.43.4",
+    "socket.io-client": "^4.4.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "react-scripts start",
+    "devserver": "export NODE_ENV=dev && nodemon server.js",
+    "prod": "export NODE_ENV=prod &&  react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

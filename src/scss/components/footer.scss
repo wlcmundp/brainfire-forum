@@ -1,0 +1,155 @@
+.footer {
+    &.cb-footer {
+        background-color: $heading-color;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -20px;
+            margin: auto;
+            width: 0;
+            height: 0;
+            border-bottom: 24px solid $heading-color;
+            border-left: 24px solid transparent;
+            border-right: 24px solid transparent;
+        }
+
+        .footer-logo {
+            display: inline-block;
+
+            img {
+                height: 54px;
+            }
+        }
+
+        .copyright-text {
+            font-size: $font-size-sm;
+            color: $white-opacity-54;
+        }
+
+        .h5 {
+            color: $white;
+            margin-bottom: $space16;
+        }
+
+        .resource-links {
+            margin-bottom: 0;
+            padding: 0;
+
+            li {
+                margin-bottom: $space16;
+                @include for-tablet-portrait-down {
+                    margin-bottom: $space8;
+                }
+
+                a {
+                    display: inline-block;
+                    color: $white-opacity-54;
+                    font-size: $font-size-sm;
+
+                    &:hover,
+                    &:active {
+                        color: $white;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &.social-links {
+
+                li {
+
+                    a {
+                        display: inline-flex;
+                        align-items: center;
+
+                        .social-icon {
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 8px;
+                            margin-right: $space8;
+                            background-color: $white-opacity-12;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: auto 20px;
+
+                            &.fb-icon {
+                                background-image: url('../../assets/images/fb-icon.svg');
+                            }
+
+                            &.insta-icon {
+                                background-image: url('../../assets/images/insta-icon.svg');
+                            }
+
+                            &.linkedin-icon {
+                                background-image: url('../../assets/images/linkedin-icon.svg');
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .contact-list {
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-bottom: $space16;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .contact-icon {
+                    width: 32px;
+                    min-width: 32px;
+                    height: 32px;
+                    border-radius: 8px;
+                    background-color: $white-opacity-12;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $white;
+
+                    .material-icons {
+                        font-size: 20px;
+                    }
+                }
+
+                .h6 {
+                    margin-bottom: $space2;
+                    color: $white-opacity-87;
+                }
+
+                p {
+                    margin-bottom: 0;
+                    color: $white-opacity-54;
+                    font-size: $font-size-sm;
+
+                    a {
+                        color: $white-opacity-54;
+                        word-break: break-all;
+                        display: inline-block;
+
+                        &:hover,
+                        &:active {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

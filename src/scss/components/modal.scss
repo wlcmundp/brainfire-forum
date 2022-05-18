@@ -1,0 +1,111 @@
+.modal {
+    &.cb-modal {
+        .btn-close {
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .modal-content {
+            display: block;
+            border: $border-width solid $border-color;
+            background: $white;
+            border-radius: $card-border-radius;
+            box-shadow: $card-shadow;
+        }
+
+        .modal-header {
+            background: none;
+            border: none;
+            padding: $space24 $space24 0;
+            margin-bottom: $space24;
+
+            @include for-tablet-portrait-down {
+                padding: $space16 $space16 0;
+                margin-bottom: $space16;
+            }
+
+            &.modal-header-border {
+                padding-bottom: $space24;
+                border-bottom: $border-width solid $border-color;
+
+                @include for-tablet-portrait-down {
+                    padding-bottom: $space16;
+                }
+            }
+
+            &.modal-title-separator {
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: $space24;
+                    bottom: 0;
+                    width: 40px;
+                    height: 3px;
+                    border-radius: 8px 8px 0 0;
+                    background: $primary;
+
+                    @include for-tablet-portrait-down {
+                        left: $space16;
+                    }
+                }
+            }
+        }
+
+        .modal-body {
+            padding: 0 $space24;
+            margin-top: $space24;
+            margin-bottom: $space24;
+
+            @include for-tablet-portrait-down {
+                padding: 0 $space16;
+                margin-top: $space16;
+                margin-bottom: $space16;
+            }
+
+            &.modal-body-scrollable {
+                max-height: 70vh;
+                overflow-y: auto;
+            }
+        }
+
+        .modal-footer {
+            background: none;
+            border: none;
+            padding: 0 $space24 $space24;
+            margin-top: $space24;
+
+            @include for-tablet-portrait-down {
+                padding: 0 $space16 $space16;
+                margin-top: $space16;
+            }
+
+            >* {
+                margin: 0;
+            }
+
+            &.modal-footer-border {
+                padding-top: $space24;
+                border-top: $border-width solid $border-color;
+
+                @include for-tablet-portrait-down {
+                    padding-top: $space16;
+                }
+            }
+        }
+
+        &.thank-you-modal {
+            .btn-close {
+                position: absolute;
+                right: 16px;
+                top: 16px;
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}

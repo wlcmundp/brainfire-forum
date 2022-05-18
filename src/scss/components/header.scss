@@ -1,0 +1,181 @@
+.navbar {
+    &.cb-navbar {
+        background-color: $white;
+        box-shadow: $header-shadow;
+        height: 74px;
+
+        @include for-tablet-portrait-down {
+            height: 68px;
+        }
+
+        .nav-logo {
+            height: 54px;
+
+            @include for-tablet-portrait-down {
+                height: 42px;
+            }
+        }
+    }
+
+    &.cb-after-login-header {
+        .dropdown-toggle.header-user-info {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            text-transform: none;
+            color: inherit;
+            font-weight: unset;
+            text-align: inherit;
+
+            &:after {
+                content: none;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+        }
+
+        .header-humburger {
+            color: $body-color;
+            cursor: pointer;
+            &:hover, &:active {
+                color: $heading-color;
+            }
+        }
+
+        .dropdown-toggle.header-notification {
+            position: relative;
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            text-transform: none;
+            color: inherit;
+            font-weight: unset;
+            text-align: inherit;
+            overflow: initial;
+
+            &:after {
+                content: none;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+
+            .number-badge {
+                background: $secondary;
+                color: $white;
+                font-size: 11px;
+                font-weight: $font-weight-semibold;
+                position: absolute;
+                right: -12px;
+                top: -6px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .dropdown-menu.notification-dropdown {
+            transform: none !important;
+            top: 100% !important;
+            margin-top: 16px;
+            width: 360px;
+            right: 0 !important;
+            left: auto !important;
+            border-color: $border-color;
+            box-shadow: $card-hover-shadow;
+            border-radius: 8px;
+            padding: 0;
+
+            @include for-tablet-portrait-down {
+                left: 16px !important;
+                right: 16px !important;
+                margin-top: 0;
+                top: 68px !important;
+                position: fixed !important;
+                width: auto;
+            }
+
+            .notification-height {
+                overflow-y: auto;
+                max-height: 400px;
+
+                @include for-tablet-portrait-down {
+                    max-height: 246px;
+                }
+            }
+
+            .dropdown-item {
+                color: $body-color;
+                padding: $space12 $space16;
+                white-space: normal;
+                border-bottom: solid $border-width $border-color;
+
+                &.unread {
+                    background-color: $secondary-lighter;
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                &:hover,
+                &:active {
+                    background: $gray-lighter;
+                    color: $heading-color;
+                }
+
+                &.view-all-notification {
+                    border-top: solid $border-width $border-color;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: $font-size-sm;
+                    font-weight: $font-weight-bold;
+                    background-color: $gray-light;
+                    padding: $space8;
+                    border-radius: 0 0 8px 8px;
+                }
+            }
+        }
+
+        .dropdown-menu.user-dropdown {
+            transform: none !important;
+            top: 100% !important;
+            margin-top: 16px;
+            min-width: 240px;
+            right: 0 !important;
+            left: auto !important;
+            border-color: $border-color;
+            box-shadow: $card-hover-shadow;
+            border-radius: 8px;
+
+            .dropdown-item {
+                color: $body-color;
+                padding: $space8 $space16;
+
+                .material-icons {
+                    color: $gray-dark;
+                }
+
+                &:hover,
+                &:active {
+                    background: $gray-lighter;
+                    color: $heading-color;
+                }
+            }
+        }
+    }
+}

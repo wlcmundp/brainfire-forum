@@ -1,0 +1,54 @@
+.cb-accordion {
+    .accordion-item {
+        border: none;
+        padding: $space12 0;
+        border-bottom: solid $border-width $border-color;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+            border: none;
+        }
+
+        .accordion-header {
+            .accordion-button {
+                padding: 0;
+                box-shadow: none;
+                color: $heading-color;
+                font-weight: $font-weight-bold;
+
+                &:before {
+                    font-family: "Material Icons";
+                    content: 'add_circle';
+                    flex-shrink: 0;
+                    font-size: 24px;
+                    margin-right: $space8;
+                    @include transition($transition);
+                    color: $heading-color;
+                    font-weight: normal;
+                }
+
+                &:after {
+                    content: none;
+                }
+
+                &:not(.collapsed) {
+                    background: none;
+
+                    &::before {
+                        content: 'cancel';
+                        transform: rotate(-180deg);
+                        @include transition($transition);
+                    }
+                }
+            }
+        }
+
+        .accordion-body {
+            padding: $space8 0 0;
+        }
+    }
+}

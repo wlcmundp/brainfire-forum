@@ -1,0 +1,8 @@
+.dashboard-page {
+    .card-body {
+        &.custom-scroll {
+            max-height: 360px;
+            overflow-y: auto;
+        }
+    }
+}

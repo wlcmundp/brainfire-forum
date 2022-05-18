@@ -1,0 +1,63 @@
+.cb-icon-avatar {
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+
+  &.cb-icon-primary {
+    color: $primary;
+    background-color: rgba($primary, 0.12);
+  }
+
+  &.cb-icon-secondary {
+    color: $secondary;
+    background-color: rgba($secondary, 0.12);
+  }
+  &.cb-icon-dark {
+    color: $body-color;
+    background-color: rgba($body-color, 0.12);
+  }
+
+  &.cb-icon-success {
+    color: $success-color;
+    background-color: rgba($success-color, 0.12);
+  }
+
+  &.cb-icon-danger {
+    color: $danger-color;
+    background-color: rgba($danger-color, 0.12);
+  }
+
+  &.cb-icon-gray {
+    color: $gray-dark;
+    background-color: rgba($gray-dark, 0.12);
+  }
+
+  &.cb-icon-54 {
+    min-width: 54px;
+    width: 54px;
+    height: 54px;
+    font-size: $font-size-normal;
+
+    .material-icons {
+      font-size: 32px;
+    }
+  }
+
+  &.cb-icon-72 {
+    min-width: 72px;
+    width: 72px;
+    height: 72px;
+    font-size: $font-size-normal;
+
+    .material-icons {
+      font-size: 42px;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.cb-list-group.cb-bordered-list {
+    &.survey-que-list {
+        .cb-list-item {
+            padding-top: $space24;
+            padding-bottom: $space24;
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            @include for-tablet-portrait-down {
+                padding-top: $space16;
+                padding-bottom: $space16;
+            }
+
+            .form-group.cb-form-group {
+
+                // radio icon
+                .form-radio-option {
+                    position: relative;
+                    padding-left: $space30;
+
+                    &:before {
+                        content: 'radio_button_unchecked';
+                        font-family: 'Material Icons';
+                        color: $gray;
+                        font-size: 24px;
+                        margin-right: $space8;
+                        position: absolute;
+                        left: 0;
+                        top: 2px;
+                    }
+                }
+
+                // checkbox icon
+                .form-checkbox-option {
+                    position: relative;
+                    padding-left: $space30;
+
+                    &:before {
+                        content: 'check_box_outline_blank';
+                        font-family: 'Material Icons';
+                        color: $gray;
+                        font-size: 24px;
+                        margin-right: $space8;
+                        position: absolute;
+                        left: 0;
+                        top: 2px;
+                    }
+                }
+
+                // radio and checkbox option
+                &.form-option-field {
+                    flex: 1;
+
+                    .form-control-option {
+                        border-radius: 8px 0 0 8px;
+
+                        @include for-tablet-portrait-down {
+                            border-radius: 8px 8px 0 0;
+                        }
+                    }
+
+                    .form-control-score {
+                        width: 110px;
+                        border-radius: 0 8px 8px 0;
+
+                        @include for-tablet-portrait-down {
+                            border-radius: 0 0 8px 8px;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                // text - paragraph
+                &.form-paragraph-score {
+                    width: 110px;
+
+                    @include for-tablet-portrait-down {
+                        width: 100%;
+                    }
+                }
+            }
+
+            // remove button
+            .btn-ans-remove {
+                margin: $space30 0 0 $space8;
+            }
+
+            .multiple-choice-grid-field {
+                .btn-ans-remove {
+                    margin-top: 0;
+                }
+            }
+
+            .btn-gray-outline {
+                border: $border-width-2 dashed $border-color;
+            }
+        }
+    }
+}

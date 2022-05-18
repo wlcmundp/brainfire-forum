@@ -1,0 +1,70 @@
+.badge {
+    border-radius: 50px;
+
+    &.cb-badge {
+        text-transform: uppercase;
+        font-size: $font-size-11;
+        border: solid $border-width $border-color;
+    }
+
+    &.bg-success {
+        color: $success-color;
+        background: rgba($success-color, 0.12) !important;
+        border-color: rgba($success-color, 0.24);
+    }
+    &.bg-danger {
+        color: $danger-color;
+        background: rgba($danger-color, 0.12) !important;
+        border-color: rgba($danger-color, 0.24);
+    }
+
+    &.bg-success-filled {
+        background: $success-color !important;
+        border-color: $success-color !important;
+        color: $white;
+    }
+
+    &.bg-primary {
+        color: $primary;
+        background: rgba($primary, 0.12) !important;
+        border-color: rgba($primary, 0.24);
+    }
+
+    &.bg-secondary {
+        color: $secondary;
+        background: rgba($secondary, 0.12) !important;
+        border-color: rgba($secondary, 0.24);
+    }
+
+    &.bg-gray {
+        color: $gray-dark;
+        background: $gray-lighter !important;
+        border-color: $border-color;
+    }
+
+    &.bg-gray-filled {
+        background: $gray-dark !important;
+        border-color: $gray-dark !important;
+        color: $white;
+    }
+
+    &.cb-badge-filled {
+        &.bg-secondary {
+            color: $white;
+            background: $secondary !important;
+            border-color: $secondary;
+        }
+
+        &.bg-success {
+            color: $white;
+            background: $success-color !important;
+            border-color: $success-color;
+        }
+
+        &.bg-primary {
+            color: $white;
+            background: $primary !important;
+            border-color: $primary;
+        }
+    }
+}

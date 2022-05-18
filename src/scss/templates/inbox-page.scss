@@ -1,0 +1,23 @@
+// Inbox Listing Page
+.table-col-msg {
+    width: 220px;
+}
+
+// Inbox Detail Page
+.cb-inbox-msg-card {
+    .chatroom-group {
+        max-height: 60vh;
+        overflow-y: auto;
+
+        .chat-list {
+            li {
+                .chat-message {
+                    padding: 0;
+                    border: none;
+                    box-shadow: none;
+                    font-size: $font-size-normal;
+                }
+            }
+        }
+    }
+}

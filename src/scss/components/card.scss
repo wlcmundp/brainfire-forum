@@ -1,0 +1,221 @@
+.card {
+
+    &.cb-card {
+        border: $border-width solid $border-color;
+        background: $white;
+        border-radius: $card-border-radius;
+        box-shadow: $card-shadow;
+        display: block;
+
+        .card-header {
+            background: none;
+            border: none;
+            padding: $space24 $space24 0;
+            margin-bottom: $space24;
+
+            @include for-tablet-portrait-down {
+                padding: $space16 $space16 0;
+                margin-bottom: $space16;
+            }
+
+            &.card-header-border {
+                padding-bottom: $space24;
+                border-bottom: $border-width solid $border-color;
+
+                @include for-tablet-portrait-down {
+                    padding-bottom: $space16;
+                }
+            }
+
+            &.card-title-separator {
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: $space24;
+                    bottom: 0;
+                    width: 40px;
+                    height: 3px;
+                    border-radius: 8px 8px 0 0;
+                    background: $primary;
+
+                    @include for-tablet-portrait-down {
+                        left: $space16;
+                    }
+                }
+            }
+        }
+
+        .card-header-media {
+            max-height: 140px;
+            position: relative;
+            overflow: hidden;
+            background-color: $gray-light;
+            border-radius: $card-border-radius;
+            box-shadow: $btn-shadow;
+            display: flex;
+            align-items: center;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 100%;
+                bottom: 0;
+                height: 50%;
+                z-index: 1;
+                background: $heading-color;
+                background: linear-gradient(180deg, rgba($heading-color, 1) 0%, rgba($heading-color, 0) 0%, rgba($heading-color, 0.9) 100%);
+            }
+
+            img {
+                width: 100%;
+                @include transition($transition);
+                transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+            }
+        }
+
+        .blog-card-media {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: $space24;
+
+            img {
+                border-radius: $card-border-radius;
+                box-shadow: $card-shadow;
+                width: 100%;
+            }
+
+            @include for-tablet-portrait-down {
+                margin-bottom: $space16;
+            }
+        }
+
+        .card-subtitle {
+            color: rgba($body-color, 0.87);
+            font-size: $font-size-sm;
+        }
+
+        .card-body {
+            padding: 0 $space24;
+            margin-top: $space24;
+            margin-bottom: $space24;
+
+            @include for-tablet-portrait-down {
+                padding: 0 $space16;
+                margin-top: $space16;
+                margin-bottom: $space16;
+            }
+        }
+
+        .card-footer {
+            background: none;
+            border: none;
+            padding: 0 $space24 $space24;
+            margin-top: $space24;
+
+            @include for-tablet-portrait-down {
+                padding: 0 $space16 $space16;
+                margin-top: $space16;
+            }
+
+            &.card-footer-border {
+                padding-top: $space24;
+                border-top: $border-width solid $border-color;
+
+                @include for-tablet-portrait-down {
+                    padding-top: $space16;
+                }
+            }
+        }
+
+        &.card-hover-shadow {
+            @include transition($transition);
+
+            &:hover,
+            &:active {
+                box-shadow: $card-hover-shadow;
+                @include transition($transition);
+            }
+        }
+
+        &.card-content-equal {
+            display: flex;
+            width: 100%;
+
+            .card-header {
+                margin-bottom: 0;
+            }
+
+            .card-content-wrappper {
+                flex: 1 1 auto;
+                display: flex;
+                flex-direction: column;
+
+                .card-footer {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        &:hover {
+            .card-header-media {
+                img {
+                    @include transition($transition);
+                    transform: scale(1);
+                    -webkit-transform: scale(1);
+                }
+            }
+        }
+
+        &.card-action {
+            .card-action-buttons {
+                position: absolute;
+                right: 16px;
+                z-index: 2;
+                top: 0;
+                background: rgba($white, 0.95);
+                padding: $space4;
+                opacity: 0;
+                @include transition($transition);
+                border-radius: 0 0 8px 8px;
+
+                @include for-tablet-portrait-down {
+                    opacity: 1;
+                }
+            }
+
+            &:hover,
+            &:active {
+                .card-header-media {
+                    &::after {
+                        height: 100%;
+                    }
+                }
+
+                .card-action-buttons {
+                    opacity: 1;
+                    @include transition($transition);
+                }
+            }
+        }
+    }
+
+    &.cb-list-card {
+        .cb-list-group {
+
+            &.cb-bordered-list {
+                .cb-list-item {
+                    padding: $space16;
+
+                    @include for-tablet-portrait-down {
+                        padding: $space12;
+                    }
+                }
+            }
+        }
+    }
+}

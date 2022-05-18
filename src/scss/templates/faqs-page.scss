@@ -1,0 +1,9 @@
+.faq-email-card {
+    position: sticky;
+    top: 80px;
+
+    @include for-tablet-down {
+        top: auto;
+        position: relative;
+    }
+}

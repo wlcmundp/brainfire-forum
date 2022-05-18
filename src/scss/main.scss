@@ -1,0 +1,37 @@
+// Bootstrap
+@import "bootstrap";
+
+// calendar
+@import "react-calendar/dist/Calendar.css";
+
+// Variables
+@import "variables.scss";
+
+//Components
+@import "components/mixin.scss";
+@import "components/button.scss";
+@import "components/header.scss";
+@import "components/footer.scss";
+@import "components/form-elements.scss";
+@import "components/typography.scss";
+@import "components/card.scss";
+@import "components/icons.scss";
+@import "components/sidebar.scss";
+@import "components/breadcrumb.scss";
+@import "components/badge.scss";
+@import "components/list.scss";
+@import "components/table.scss";
+@import "components/modal.scss";
+@import "components/accordion.scss";
+
+// Templates
+@import "templates/global.scss";
+@import "templates/dashboard.scss";
+@import "templates/survey-page.scss";
+@import "templates/blog-page.scss";
+@import "templates/forum-page.scss";
+@import "templates/faqs-page.scss";
+@import "templates/roles-page.scss";
+@import "templates/login.scss";
+@import "templates/chatroom-page.scss";
+@import "templates/inbox-page.scss";

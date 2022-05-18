@@ -1,0 +1,24 @@
+// Role listing page
+.roles-page {
+    .table-col-permissions {
+        max-width: 260px;
+    }
+
+    .table-col-actions {
+        min-width: 120px;
+    }
+}
+
+// Add new role page
+.create-role-page {
+    .permission-table {
+        .simple-checkbox-selection {
+            .form-check-label {
+                .checkbox-icon {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}

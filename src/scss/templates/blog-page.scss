@@ -1,0 +1,105 @@
+// blog list - status
+.blog-list {
+    .blog-status {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        border-radius: 6px 0 8px 0;
+        border: none;
+        box-shadow: $card-hover-shadow;
+
+        &.badge {
+            &.bg-success {
+                background: $success-color !important;
+                color: $white;
+            }
+
+            &.bg-gray {
+                background: $gray-dark !important;
+                color: $white;
+            }
+        }
+    }
+}
+
+
+// Blog detail - Image
+.blog-detail {
+    .blog-detail-image {
+        float: right;
+        margin-left: $space24;
+        max-width: 540px;
+
+        @include for-tablet-portrait-down {
+            margin-left: auto;
+            margin-right: auto;
+            float: none;
+        }
+    }
+}
+
+// Blog detail - comment list
+.blog-social-links {
+    li {
+        display: inline-flex;
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background-color: $gray-lighter;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            svg path {
+                fill: $gray-dark;
+                @include transition($transition);
+            }
+
+            &:hover,
+            &:active {
+                background-color: $gray-light;
+
+                svg path {
+                    fill: $heading-color;
+                    @include transition($transition);
+                }
+            }
+
+        }
+    }
+}
+
+// blog detail - comment list
+.comment-list {
+    margin-bottom: $space24;
+
+    @include for-tablet-portrait-down {
+        margin-bottom: $space16;
+    }
+
+    li {
+        margin-bottom: $space16;
+
+        .comment-title {
+            flex: 1;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Blog detail - Post comment form
+.post-comment {
+    padding: $space24;
+    border-radius: $card-border-radius;
+    background-color: $gray-lighter;
+
+    @include for-tablet-portrait-down {
+        padding: $space16;
+    }
+}

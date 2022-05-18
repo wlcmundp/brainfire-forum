@@ -1,0 +1,30 @@
+@mixin transition($transition) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+@mixin for-phone-only {
+    @media (max-width: 575px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-down {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-down {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin for-desktop-down {
+    @media (max-width: 1199px) {
+        @content;
+    }
+}

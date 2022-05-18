@@ -1,0 +1,48 @@
+.cb-list-group {
+    &.cb-bordered-list {
+        .cb-list-item {
+            border-bottom: solid $border-width $border-color;
+            padding-top: $space12;
+            padding-bottom: $space12;
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+        }
+    }
+
+    &.cb-flat-list {
+        .cb-list-item {
+            margin-bottom: $space16;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &.cb-flat-sublist {
+        padding-left: $space24;
+        @include for-tablet-portrait-down {
+            padding-left: $space16;
+        }
+        .cb-list-item {
+            padding: 0;
+            border: none;
+            margin-bottom: $space8;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .list-item-title {
+        flex: 1;
+    }
+
+}
